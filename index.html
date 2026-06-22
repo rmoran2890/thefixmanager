@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFixManager - Diagnóstico Inteligente iPhone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <span class="nav-brand"> TheFixManager</span>
+            <span class="nav-tag"> PERÚ</span>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>TheFixManager</h1>
+            <p>Diagnóstico digital basado en manuales de ingeniería de Apple</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card" id="triage-card">
+            
+            <div id="inicio-container">
+                <div class="apple-icon">📱</div>
+                <h2>¿Qué le pasa a tu iPhone?</h2>
+                <p class="hero-text">Elimina la incertidumbre antes de visitar un taller. Descubre la falla real de tu dispositivo a través de nuestro protocolo guiado de descarte técnico.</p>
+                
+                <div class="beneficios-triage">
+                    <div class="beneficio-row">
+                        <div class="b-icon">🔍</div>
+                        <div>
+                            <strong>Descarte Basado en Evidencia</strong>
+                            <p>Estructurado bajo la taxonomía y árbol de decisiones de los manuales técnicos oficiales de Apple.</p>
+                        </div>
+                    </div>
+                    <div class="beneficio-row">
+                        <div class="b-icon">🛡️</div>
+                        <div>
+                            <strong>Transparencia en tu Diagnóstico</strong>
+                            <p>Obtén un reporte técnico detallado con códigos de error de ingeniería para evitar diagnóstico y cobros fantasmas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-start" onclick="comenzarFlujo()">Iniciar Diagnóstico Digital</button>
+            </div>
+
+            <div id="quiz-container" class="hidden">
+                <div class="triage-header">
+                    <span class="badge-live">DIAGNÓSTICO</span>
+                </div>
+                <p class="pregunta" id="pregunta-texto">Cargando pregunta...</p>
+                <div class="botones-group">
+                    </div>
+                <button class="btn-regresar hidden" id="btn-regresar" onclick="goBack()">« Modificar respuesta anterior</button>
+            </div>
+
+            <div id="resultado-container" class="hidden">
+                <div class="alert-success">
+                    <div class="result-header">
+                        <span class="status-dot"></span>
+                        <h3>Pre-Diagnóstico Completado</h3>
+                    </div>
+                    <p class="bold" id="diagnostico-final">Falla Detectada</p>
+                    
+                    <div class="nota-tecnica">
+                        <strong>INFORME TÉCNICO COMPILADO:</strong>
+                        <p id="nota-tecnica-texto">Cargando análisis...</p>
+                    </div>
+                    <p class="subtext">Este código identifica el componente exacto que está fallando, basándose en los manuales técnicos oficiales de Apple.</p>
+                </div>
+                
+                <button class="btn-regresar" onclick="reiniciarTriage()">🔄 Realizar un nuevo diagnóstico</button>
+            </div>
+
+        </div>
+
+        <div id="tecnicos-section" class="hidden">
+            <div class="section-title-group">
+                <h2>Laboratorios Certificados</h2>
+                <p>Especialistas homologados con stock inmediato para tu código de error:</p>
+            </div>
+            <div class="grid-tecnicos" id="lista-tecnicos">
+                </div>
+        </div>
+    </main>
+
+    <footer class="apple-footer">
+        <p>TheFixManager Labs © 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
